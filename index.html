@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shivappa | Java Backend Developer</title>
+    <title>Shivappa | Java & .NET Full Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -676,6 +676,43 @@
             transform: translateY(-5px);
         }
 
+        /* Certifications */
+        .certifications-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .certification-card {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .cert-icon {
+            font-size: 40px;
+            color: var(--accent-cyan);
+            margin-bottom: 15px;
+        }
+
+        /* Contact Info Badges */
+        .contact-badges {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .badge {
+            background: rgba(0, 212, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 30px;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
         /* Responsive Design */
         @media (max-width: 992px) {
             .hero h1 {
@@ -723,6 +760,10 @@
             .skills-grid {
                 grid-template-columns: 1fr;
             }
+            
+            .certifications-grid {
+                grid-template-columns: 1fr;
+            }
         }
 
         /* Parallax effect on scroll */
@@ -735,6 +776,24 @@
             z-index: -1;
             opacity: 0.1;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%2300d4ff' fill-opacity='0.1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+        
+        /* Download button for resume */
+        .download-btn {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background: linear-gradient(90deg, var(--accent-blue), var(--accent-purple));
+            color: white;
+            text-decoration: none;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: var(--transition);
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 212, 255, 0.4);
         }
     </style>
 </head>
@@ -753,7 +812,7 @@
                 <a href="#about">About</a>
                 <a href="#skills">Skills</a>
                 <a href="#experience">Experience</a>
-                <a href="#projects">Projects</a>
+                <a href="#certifications">Certifications</a>
                 <a href="#contact">Contact</a>
             </div>
         </div>
@@ -769,21 +828,26 @@
             <div class="cube">
                 <div class="face front"><i class="fab fa-java"></i></div>
                 <div class="face back"><i class="fas fa-database"></i></div>
-                <div class="face right"><i class="fas fa-cloud"></i></div>
+                <div class="face right"><i class="fab fa-microsoft"></i></div>
                 <div class="face left"><i class="fas fa-code"></i></div>
                 <div class="face top"><i class="fas fa-server"></i></div>
-                <div class="face bottom"><i class="fas fa-microchip"></i></div>
+                <div class="face bottom"><i class="fas fa-cloud"></i></div>
             </div>
         </div>
         
         <div class="container">
             <div class="hero-content">
-                <h1>Shivappa — Java Backend Developer</h1>
-                <p class="hero-subtitle">Spring Boot | REST APIs | MySQL | Government & ERP Systems</p>
-                <p>Building robust backend solutions with 1+ year of experience in Java, Spring Boot, and MySQL. Specializing in Government systems and Hospital Management ERP applications.</p>
+                <h1>Shivappa</h1>
+                <p class="hero-subtitle">Software Engineer | Java & .NET Full Stack Developer</p>
+                <p>Spring Boot, ASP.NET MVC, REST APIs | Oracle, MySQL | Microservices</p>
+                <div class="contact-badges">
+                    <div class="badge"><i class="fas fa-map-marker-alt"></i> Bengaluru, Karnataka, India</div>
+                    <div class="badge"><i class="fas fa-phone"></i> 6361570557</div>
+                    <div class="badge"><i class="fas fa-envelope"></i> shivuyk57@gmail.com</div>
+                </div>
                 <div class="hero-btns">
                     <a href="#resume" class="btn btn-primary"><i class="fas fa-download"></i> Download Resume</a>
-                    <a href="#projects" class="btn btn-secondary"><i class="fas fa-code"></i> View Projects</a>
+                    <a href="#contact" class="btn btn-secondary"><i class="fas fa-envelope"></i> Contact Me</a>
                 </div>
             </div>
         </div>
@@ -796,16 +860,16 @@
             <div class="about-content">
                 <div class="about-text">
                     <div class="card-3d">
-                        <p>Java Backend Developer with <strong>1+ year of experience</strong> in Spring Boot, REST APIs, and MySQL. Focused on building scalable, secure, and efficient backend systems.</p>
-                        <p>Worked on <strong>Government systems at NIC</strong> and <strong>Hospital Management ERP applications</strong> at MIMSYSTECH. Passionate about solving complex problems with clean, maintainable code.</p>
-                        <p>Currently based in <strong>Bengaluru</strong>, I'm looking for opportunities to contribute to challenging backend projects in a team environment.</p>
+                        <p>Software Engineer with hands-on experience in Java and .NET based enterprise application development. Experienced in building secure, scalable backend systems using Spring Boot, ASP.NET MVC, RESTful APIs, and SQL databases.</p>
+                        <p>Worked on government and enterprise-level projects, contributing to full SDLC activities including requirements analysis, development, testing, deployment, and production support. Strong understanding of microservices architecture, authentication and authorization, and CI/CD processes.</p>
+                        <p>Technical expertise includes Java, C#, Spring Boot, ASP.NET, Oracle DB, MySQL, REST APIs, Git, and basic AWS. Actively seeking opportunities as a Java Developer, .NET Developer, or Full Stack Software Engineer.</p>
                     </div>
                 </div>
                 <div class="skills-icons">
                     <div class="skill-icon card-3d"><i class="fab fa-java"></i></div>
-                    <div class="skill-icon card-3d"><i class="fas fa-leaf"></i></div>
+                    <div class="skill-icon card-3d"><i class="fab fa-microsoft"></i></div>
                     <div class="skill-icon card-3d"><i class="fas fa-database"></i></div>
-                    <div class="skill-icon card-3d"><i class="fas fa-code-branch"></i></div>
+                    <div class="skill-icon card-3d"><i class="fas fa-cloud"></i></div>
                 </div>
             </div>
         </div>
@@ -817,7 +881,7 @@
             <h2 class="section-title">Technical Skills</h2>
             <div class="skills-grid">
                 <div class="skill-category card-3d">
-                    <h3><i class="fas fa-server"></i> Backend</h3>
+                    <h3><i class="fas fa-code"></i> Programming</h3>
                     <div class="skill-item">
                         <div class="skill-name">
                             <span>Java</span>
@@ -829,7 +893,7 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Spring Boot</span>
+                            <span>C#</span>
                             <span>Advanced</span>
                         </div>
                         <div class="skill-bar">
@@ -838,7 +902,7 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>REST APIs</span>
+                            <span>ASP.NET</span>
                             <span>Advanced</span>
                         </div>
                         <div class="skill-bar">
@@ -848,10 +912,41 @@
                 </div>
                 
                 <div class="skill-category card-3d">
-                    <h3><i class="fas fa-database"></i> Database</h3>
+                    <h3><i class="fas fa-server"></i> Frameworks</h3>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>MySQL</span>
+                            <span>Spring Boot</span>
+                            <span>Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>.NET Core</span>
+                            <span>Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="87"></div>
+                        </div>
+                    </div>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>ASP.NET MVC</span>
+                            <span>Advanced</span>
+                        </div>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-width="85"></div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="skill-category card-3d">
+                    <h3><i class="fas fa-database"></i> Databases</h3>
+                    <div class="skill-item">
+                        <div class="skill-name">
+                            <span>Oracle</span>
                             <span>Advanced</span>
                         </div>
                         <div class="skill-bar">
@@ -860,42 +955,20 @@
                     </div>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>SQL</span>
+                            <span>MySQL</span>
                             <span>Advanced</span>
                         </div>
                         <div class="skill-bar">
                             <div class="skill-progress" data-width="87"></div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="skill-category card-3d">
-                    <h3><i class="fas fa-tools"></i> Tools & DevOps</h3>
                     <div class="skill-item">
                         <div class="skill-name">
-                            <span>Git</span>
-                            <span>Intermediate</span>
+                            <span>PL/SQL</span>
+                            <span>Advanced</span>
                         </div>
                         <div class="skill-bar">
-                            <div class="skill-progress" data-width="80"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>Docker</span>
-                            <span>Intermediate</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="75"></div>
-                        </div>
-                    </div>
-                    <div class="skill-item">
-                        <div class="skill-name">
-                            <span>CI/CD</span>
-                            <span>Intermediate</span>
-                        </div>
-                        <div class="skill-bar">
-                            <div class="skill-progress" data-width="70"></div>
+                            <div class="skill-progress" data-width="88"></div>
                         </div>
                     </div>
                 </div>
@@ -911,91 +984,142 @@
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card-3d">
-                        <div class="timeline-date">2023 - Present</div>
-                        <h3 class="timeline-company">NIC – Government of India</h3>
-                        <p class="timeline-role">Java Backend Developer</p>
-                        <p>Developed and maintained backend systems for government applications using Spring Boot and REST APIs. Worked on microservices architecture for scalable solutions.</p>
+                        <div class="timeline-date">June 2025 - October 2025 (5 months)</div>
+                        <h3 class="timeline-company">National Informatics Centre, Govt of India</h3>
+                        <p class="timeline-role">Software Developer</p>
+                        <ul>
+                            <li>Developed and maintained enterprise-level web applications using Java, Spring Boot, and Oracle Database.</li>
+                            <li>Designed and implemented RESTful APIs for data exchange between internal and external systems.</li>
+                            <li>Optimized SQL and PL/SQL queries, improving database performance by nearly 30%.</li>
+                            <li>Implemented Spring Security for authentication and role-based authorization.</li>
+                            <li>Worked on microservices-based architecture for scalable application development.</li>
+                            <li>Participated in complete SDLC including requirement analysis, development, testing, and deployment.</li>
+                            <li>Supported application deployment on Tomcat and WebLogic servers with CI/CD pipelines.</li>
+                        </ul>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card-3d">
-                        <div class="timeline-date">2022 - 2023</div>
-                        <h3 class="timeline-company">MIMSYSTECH</h3>
-                        <p class="timeline-role">Backend Support – Hospital ERP</p>
-                        <p>Provided backend support for Hospital Management ERP system using Java, Spring Boot, and MySQL. Implemented REST APIs and role-based access control.</p>
+                        <div class="timeline-date">June 2024 - June 2025 (1 year 1 month)</div>
+                        <h3 class="timeline-company">MIMsYS Technologies Pvt Ltd</h3>
+                        <p class="timeline-role">Junior Software Engineer - Backend Support (Hospital Management ERP)</p>
+                        <ul>
+                            <li>Worked on backend development for a Hospital Management ERP system using C# and .NET.</li>
+                            <li>Contributed to modules including patient management, appointments, billing, and reports.</li>
+                            <li>Assisted in developing and validating REST APIs for ERP functionalities.</li>
+                            <li>Performed data validation and issue resolution using MySQL.</li>
+                            <li>Collaborated with backend teams to debug production issues and improve application stability.</li>
+                            <li>Supported deployment verification and backend testing activities in CI/CD environments.</li>
+                        </ul>
                     </div>
                 </div>
                 
                 <div class="timeline-item">
                     <div class="timeline-dot"></div>
                     <div class="timeline-content card-3d">
-                        <div class="timeline-date">2021 - 2022</div>
+                        <div class="timeline-date">June 2023 - February 2024 (9 months)</div>
                         <h3 class="timeline-company">KodNest</h3>
-                        <p class="timeline-role">Java Backend Development Internship</p>
-                        <p>Completed intensive training in Java backend development. Built projects using Spring Boot, REST APIs, and MySQL database management.</p>
+                        <p class="timeline-role">Java Full Stack Development Training</p>
+                        <ul>
+                            <li>Trained in Core Java, JavaScript, Spring Boot, MySQL, and Spring Security.</li>
+                            <li>Developed REST APIs using Spring Boot and integrated them with MySQL databases.</li>
+                            <li>Participated in building real-time application features.</li>
+                            <li>Applied Data Structures and Algorithms concepts during development.</li>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" style="background: rgba(10, 25, 47, 0.5);">
+    <!-- Certifications Section -->
+    <section id="certifications" style="background: rgba(10, 25, 47, 0.5);">
         <div class="container">
-            <h2 class="section-title">Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card card-3d">
-                    <h3 class="project-title">Hospital Management ERP</h3>
-                    <p>Complete ERP system for hospital management with patient records, appointment scheduling, billing, and inventory management.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">REST APIs</span>
+            <h2 class="section-title">Certifications</h2>
+            <div class="certifications-grid">
+                <div class="certification-card card-3d">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
                     </div>
-                    <a href="#" class="project-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                    <h3>Certified Software Engineer</h3>
+                    <p>Professional certification in software engineering principles and practices.</p>
                 </div>
                 
-                <div class="project-card card-3d">
-                    <h3 class="project-title">College Management System</h3>
-                    <p>Backend system for college administration with student management, course scheduling, and grade tracking functionality.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">JWT Auth</span>
+                <div class="certification-card card-3d">
+                    <div class="cert-icon">
+                        <i class="fas fa-robot"></i>
                     </div>
-                    <a href="#" class="project-btn">Live Demo <i class="fas fa-external-link-alt"></i></a>
+                    <h3>Machine Learning and Artificial Intelligence</h3>
+                    <p>Certification in ML and AI concepts and applications.</p>
                 </div>
                 
-                <div class="project-card card-3d">
-                    <h3 class="project-title">E-Commerce REST API</h3>
-                    <p>Complete REST API for e-commerce platform with product catalog, user authentication, order processing, and payment integration.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Java</span>
-                        <span class="tech-tag">Spring Boot</span>
-                        <span class="tech-tag">MySQL</span>
-                        <span class="tech-tag">Spring Security</span>
+                <div class="certification-card card-3d">
+                    <div class="cert-icon">
+                        <i class="fas fa-database"></i>
                     </div>
-                    <a href="#" class="project-btn">View Details <i class="fas fa-arrow-right"></i></a>
+                    <h3>Oracle Advanced PL/SQL Developer</h3>
+                    <p>Advanced certification in Oracle PL/SQL development.</p>
+                </div>
+                
+                <div class="certification-card card-3d">
+                    <div class="cert-icon">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                    <h3>Certified Professional</h3>
+                    <p>Professional certification in software development methodologies.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card-3d">
+                        <div class="timeline-date">July 2019 - July 2023</div>
+                        <h3 class="timeline-company">Visvesvaraya Technological University</h3>
+                        <p class="timeline-role">Bachelor of Engineering - BE, Computer Science and Engineering</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card-3d">
+                        <div class="timeline-date">June 2018 - October 2019</div>
+                        <h3 class="timeline-company">Morarji Desai Residential PU Science College, Hiresindhogi</h3>
+                        <p class="timeline-role">PUC, Science (PCMB)</p>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content card-3d">
+                        <div class="timeline-date">June 2016 - July 2017</div>
+                        <h3 class="timeline-company">Morarji Desai Residential School, Kanakagiri</h3>
+                        <p class="timeline-role">SSLC</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Resume Section -->
-    <section id="resume">
+    <section id="resume" style="background: rgba(10, 25, 47, 0.5);">
         <div class="container">
             <div class="resume-container">
                 <div class="resume-card card-3d">
                     <div class="resume-icon">
                         <i class="fas fa-file-alt"></i>
                     </div>
-                    <h2 class="section-title">Resume</h2>
-                    <p>Download my complete resume with detailed experience, education, and project information.</p>
-                    <a href="#" class="btn btn-primary" style="margin-top: 30px;">
+                    <h2 class="section-title">Download Resume</h2>
+                    <p>Get my complete professional profile with detailed experience, skills, certifications, and education.</p>
+                    <a href="Profile (1).pdf" download="Shivappa_Resume.pdf" class="download-btn">
                         <i class="fas fa-download"></i> Download Resume (PDF)
                     </a>
                 </div>
@@ -1015,7 +1139,17 @@
                         </div>
                         <div>
                             <h3>Email</h3>
-                            <p>shivappa.dev@example.com</p>
+                            <p>shivuyk57@gmail.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item card-3d">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div>
+                            <h3>Phone</h3>
+                            <p>6361570557</p>
                         </div>
                     </div>
                     
@@ -1025,7 +1159,7 @@
                         </div>
                         <div>
                             <h3>LinkedIn</h3>
-                            <p>linkedin.com/in/shivappa-java-dev</p>
+                            <p>linkedin.com/in/shivappa-604232247</p>
                         </div>
                     </div>
                     
@@ -1035,7 +1169,17 @@
                         </div>
                         <div>
                             <h3>Location</h3>
-                            <p>Bengaluru, India</p>
+                            <p>Arekere, Bannerghatta Road, Bangalore - 560076, India</p>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item card-3d">
+                        <div class="contact-icon">
+                            <i class="fas fa-globe"></i>
+                        </div>
+                        <div>
+                            <h3>Personal Links</h3>
+                            <p>linktr.ee/shivappa_yk</p>
                         </div>
                     </div>
                 </div>
@@ -1068,10 +1212,10 @@
         <div class="container">
             <p>&copy; 2023 Shivappa. All rights reserved.</p>
             <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin-in"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                <a href="www.linkedin.com/in/shivappa-604232247" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="mailto:shivuyk57@gmail.com" class="social-link"><i class="fas fa-envelope"></i></a>
+                <a href="linktr.ee/shivappa_yk" class="social-link"><i class="fas fa-link"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-file-pdf"></i></a>
             </div>
         </div>
     </footer>
